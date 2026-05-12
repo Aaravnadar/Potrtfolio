@@ -104,3 +104,33 @@ Hi! My name is Aarav Nadar
         Score Predictor
     </a>
 </div>
+<br>
+
+### CS 111 College Credit Evidence
+
+> Demonstrating competency in all CS 111 learning objectives through my game project.
+
+<details>
+<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">📚 Object-Oriented Programming</summary>
+<ul>
+<li>✅ 2+ custom character classes extending base classes</li>
+<li>✅ Methods with parameters (e.g., collisionHandler)</li>
+<li>✅ GameLevel configuration using Object Literals</li>
+<li>✅ Inheritance chain with extends keyword</li>
+<li>✅ Method overriding (update(), draw(), handleCollision())</li>
+<li>✅ Constructor chaining with super()</li>
+</ul>
+</details>
+
+<details>
+<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">🔁 Control Structures & Data Types</summary>
+<ul>
+<li>✅ Loops for game object arrays and animation frames</li>
+<li>✅ Conditionals for collision detection and state transitions</li>
+<li>✅ Numbers, Strings, Booleans, Arrays, and JSON Objects</li>
+<li>✅ Mathematical and Boolean operators for physics/logic</li>
+</ul>
+</details>
+
+<details>
+<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">⌨️ Input/Output & APIs</summary>
