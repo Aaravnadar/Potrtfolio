@@ -5,7 +5,7 @@ hide: true
 show_reading_time: false
 ---
 
-Hi! My name is [Your Full Name]
+Hi! My name is Aarav Nadar  
 
 ### Development Environment
 
@@ -80,6 +80,27 @@ Hi! My name is [Your Full Name]
     <a href="{{site.baseurl}}/cs-pathway" class="btn" style="background-color: var(--orange);">
        CS Pathway
     </a>
+    <a href="https://groupofthethree.opencodingsociety.com/gamify/escapethetower" class="btn" style="background-color: var(--purple);">
+        Escape the Tower
+    </a>
 </div>
 
 <br>
+### My Projects
+
+> Here are some tools and apps I built, click to try them!
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+    <a href="{{site.baseurl}}/exam-predictor" class="btn" style="background-color: var(--blue); color: white;">
+        Exam Predictor
+    </a>
+    <a href="{{site.baseurl}}/grade-predictor" class="btn" style="background-color: var(--green); color: black;">
+        Grade Predictor
+    </a>
+    <a href="{{site.baseurl}}/study-tracker" class="btn" style="background-color: var(--teal); color: white;">
+        Study Tracker
+    </a>
+    <a href="{{site.baseurl}}/score-predictor" class="btn" style="background-color: var(--orange); color: white;">
+        Score Predictor
+    </a>
+</div>
