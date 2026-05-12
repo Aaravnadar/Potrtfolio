@@ -80,7 +80,7 @@ Hi! My name is Aarav Nadar
     <a href="{{site.baseurl}}/cs-pathway" class="btn" style="background-color: var(--orange);">
        CS Pathway
     </a>
-    <a href="https://groupofthethree.opencodingsociety.com/gamify/escapethetower" class="btn" style="background-color: #8B5CF6; color: white;">
+    <a href="https://groupofthree.opencodingsociety.com/gamify/escapethetower" class="btn" style="background-color: #8B5CF6; color: white;">
         Escape the Tower
     </a>
 </div>
