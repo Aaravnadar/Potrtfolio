@@ -116,17 +116,15 @@ Hi! My name is Aarav Nadar
 
 **Object-Oriented Programming:** The level is structured as a class `GameLevelMazeSub` with a constructor that takes a `gameEnv` parameter and instantiates all game objects. Characters like `Player`, `Npc`, and `SplineBarrier` are imported and extended from base classes, forming a multi-level inheritance chain (e.g., `GameObject → Character → Player`).
 
-```js
-// Inheritance and instantiation — Player extends a base Character class
+<pre><code>// Inheritance and instantiation — Player extends a base Character class
 { class: Player, data: sprite_data_octopus },
 { class: Npc,    data: sprite_data_shadow  },
 { class: SplineBarrier, data: seg1 },
-```
+</code></pre>
 
 **Methods & Parameters:** NPCs use methods like `interact()` and `reaction()` with custom dialogue logic. The `spline()` helper function takes an `id` and `points` array, maps relative coordinates to pixel values, and returns a barrier config object.
 
-```js
-// Method with parameters — converts relative coords to pixel values
+<pre><code>// Method with parameters — converts relative coords to pixel values
 function spline(id, points) {
   return {
     id,
@@ -137,31 +135,29 @@ function spline(id, points) {
     lineWidth: 22,
   };
 }
-```
+</code></pre>
 
 **Control Structures & Data Types:** The level uses arrays to store spline path segments and NPC configurations, booleans to control dialogue state (`isDialogueOpen()`), and strings for sprite paths and character greetings.
 
-```js
-// Array of objects used to define the winding maze path
+<pre><code>// Array of objects used to define the winding maze path
 const seg1 = spline('seg1', [
   [0.03, 0.945],
   [0.09, 0.940],
   [0.20, 0.920],
   [0.28, 0.895],
 ]);
-```
+</code></pre>
 
 **Input/Output & Async:** The player is controlled via WASD keyboard input configured through event listeners. The Exit Warden NPC triggers a fade transition using `requestAnimationFrame` and `setTimeout` for async sequencing, then loads the next level via `topGame.transitionToLevel()`.
 
-```js
-// Async transition to next level on player choice
+<pre><code>// Async transition to next level on player choice
 requestAnimationFrame(() => {
   fade.style.opacity = '1';
   setTimeout(() => {
     topGame.transitionToLevel();
   }, 800);
 });
-```
+</code></pre>
 
 ### CS 111 College Credit Evidence
 
