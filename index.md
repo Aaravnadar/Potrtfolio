@@ -110,11 +110,11 @@ Hi! My name is Aarav Nadar
 
 <br>
 
-### About Escape the Tower 🗼
+<div markdown="0">
+<h3>About Escape the Tower 🗼</h3>
+<blockquote>Escape the Tower is a multi-level platformer game built with JavaScript using an object-oriented game engine. I contributed by building the <strong>Maze of Shadows</strong> sublevel, which demonstrates core CS 111 concepts throughout.</blockquote>
 
-> Escape the Tower is a multi-level platformer game built with JavaScript using an object-oriented game engine. I contributed by building the **Maze of Shadows** sublevel, which demonstrates core CS 111 concepts throughout.
-
-**Object-Oriented Programming:** The level is structured as a class `GameLevelMazeSub` with a constructor that takes a `gameEnv` parameter and instantiates all game objects. Characters like `Player`, `Npc`, and `SplineBarrier` are imported and extended from base classes, forming a multi-level inheritance chain (e.g., `GameObject → Character → Player`).
+<p><strong>Object-Oriented Programming:</strong> The level is structured as a class <code>GameLevelMazeSub</code> with a constructor that takes a <code>gameEnv</code> parameter and instantiates all game objects. Characters like <code>Player</code>, <code>Npc</code>, and <code>SplineBarrier</code> are imported and extended from base classes, forming a multi-level inheritance chain (e.g., <code>GameObject → Character → Player</code>).</p>
 
 <pre><code>// Inheritance and instantiation — Player extends a base Character class
 { class: Player, data: sprite_data_octopus },
@@ -122,7 +122,7 @@ Hi! My name is Aarav Nadar
 { class: SplineBarrier, data: seg1 },
 </code></pre>
 
-**Methods & Parameters:** NPCs use methods like `interact()` and `reaction()` with custom dialogue logic. The `spline()` helper function takes an `id` and `points` array, maps relative coordinates to pixel values, and returns a barrier config object.
+<p><strong>Methods &amp; Parameters:</strong> NPCs use methods like <code>interact()</code> and <code>reaction()</code> with custom dialogue logic. The <code>spline()</code> helper function takes an <code>id</code> and <code>points</code> array, maps relative coordinates to pixel values, and returns a barrier config object.</p>
 
 <pre><code>// Method with parameters — converts relative coords to pixel values
 function spline(id, points) {
@@ -137,7 +137,7 @@ function spline(id, points) {
 }
 </code></pre>
 
-**Control Structures & Data Types:** The level uses arrays to store spline path segments and NPC configurations, booleans to control dialogue state (`isDialogueOpen()`), and strings for sprite paths and character greetings.
+<p><strong>Control Structures &amp; Data Types:</strong> The level uses arrays to store spline path segments and NPC configurations, booleans to control dialogue state (<code>isDialogueOpen()</code>), and strings for sprite paths and character greetings.</p>
 
 <pre><code>// Array of objects used to define the winding maze path
 const seg1 = spline('seg1', [
@@ -148,7 +148,7 @@ const seg1 = spline('seg1', [
 ]);
 </code></pre>
 
-**Input/Output & Async:** The player is controlled via WASD keyboard input configured through event listeners. The Exit Warden NPC triggers a fade transition using `requestAnimationFrame` and `setTimeout` for async sequencing, then loads the next level via `topGame.transitionToLevel()`.
+<p><strong>Input/Output &amp; Async:</strong> The player is controlled via WASD keyboard input configured through event listeners. The Exit Warden NPC triggers a fade transition using <code>requestAnimationFrame</code> and <code>setTimeout</code> for async sequencing, then loads the next level via <code>topGame.transitionToLevel()</code>.</p>
 
 <pre><code>// Async transition to next level on player choice
 requestAnimationFrame(() => {
@@ -158,6 +158,7 @@ requestAnimationFrame(() => {
   }, 800);
 });
 </code></pre>
+</div>
 
 ### CS 111 College Credit Evidence
 
