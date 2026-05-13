@@ -160,6 +160,81 @@ requestAnimationFrame(() => {
 </code></pre>
 </div>
 
+
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px;">
+
+    <a href="{{site.baseurl}}/snake"
+       style="
+       text-decoration: none;
+       background: linear-gradient(135deg, #111827, #1F2937);
+       color: white;
+       padding: 14px 22px;
+       border-radius: 12px;
+       border: 2px solid #3B82F6;
+       font-weight: 700;
+       box-shadow: 0 0 12px rgba(59,130,246,0.4);
+       transition: all 0.25s ease;">
+       🐍 Snake
+    </a>
+
+    <a href="{{site.baseurl}}/gamify/parallax"
+       style="
+       text-decoration: none;
+       background: linear-gradient(135deg, #064E3B, #10B981);
+       color: white;
+       padding: 14px 22px;
+       border-radius: 12px;
+       border: 2px solid #34D399;
+       font-weight: 700;
+       box-shadow: 0 0 12px rgba(16,185,129,0.4);
+       transition: all 0.25s ease;">
+       🐟 Fish
+    </a>
+
+    <a href="{{site.baseurl}}/gamify"
+       style="
+       text-decoration: none;
+       background: linear-gradient(135deg, #0F172A, #14B8A6);
+       color: white;
+       padding: 14px 22px;
+       border-radius: 12px;
+       border: 2px solid #2DD4BF;
+       font-weight: 700;
+       box-shadow: 0 0 12px rgba(45,212,191,0.4);
+       transition: all 0.25s ease;">
+       🎮 Gamify
+    </a>
+
+    <a href="{{site.baseurl}}/cs-pathway"
+       style="
+       text-decoration: none;
+       background: linear-gradient(135deg, #7C2D12, #F97316);
+       color: white;
+       padding: 14px 22px;
+       border-radius: 12px;
+       border: 2px solid #FB923C;
+       font-weight: 700;
+       box-shadow: 0 0 12px rgba(249,115,22,0.4);
+       transition: all 0.25s ease;">
+       🚀 CS Pathway
+    </a>
+
+    <a href="https://groupofthree.opencodingsociety.com/gamify/escapethetower"
+       style="
+       text-decoration: none;
+       background: linear-gradient(135deg, #1E1B4B, #7C3AED);
+       color: white;
+       padding: 14px 22px;
+       border-radius: 12px;
+       border: 2px solid #A855F7;
+       font-weight: 700;
+       box-shadow: 0 0 18px rgba(168,85,247,0.6);
+       transition: all 0.25s ease;">
+       🗼 Escape the Tower
+    </a>
+
+</div>
+
 ### CS 111 College Credit Evidence
 
 > Students must demonstrate competency in all CS 111 learning objectives through their game project.
