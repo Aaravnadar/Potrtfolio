@@ -108,6 +108,61 @@ Hi! My name is Aarav Nadar
 
 <br>
 
+<br>
+
+### About Escape the Tower 🗼
+
+> Escape the Tower is a multi-level platformer game built with JavaScript using an object-oriented game engine. I contributed by building the **Maze of Shadows** sublevel, which demonstrates core CS 111 concepts throughout.
+
+**Object-Oriented Programming:** The level is structured as a class `GameLevelMazeSub` with a constructor that takes a `gameEnv` parameter and instantiates all game objects. Characters like `Player`, `Npc`, and `SplineBarrier` are imported and extended from base classes, forming a multi-level inheritance chain (e.g., `GameObject → Character → Player`).
+
+```js
+// Inheritance and instantiation — Player extends a base Character class
+{ class: Player, data: sprite_data_octopus },
+{ class: Npc,    data: sprite_data_shadow  },
+{ class: SplineBarrier, data: seg1 },
+```
+
+**Methods & Parameters:** NPCs use methods like `interact()` and `reaction()` with custom dialogue logic. The `spline()` helper function takes an `id` and `points` array, maps relative coordinates to pixel values, and returns a barrier config object.
+
+```js
+// Method with parameters — converts relative coords to pixel values
+function spline(id, points) {
+  return {
+    id,
+    splinePoints: points.map(([px, py]) => ({
+      x: Math.round(px * width),
+      y: Math.round(py * height)
+    })),
+    lineWidth: 22,
+  };
+}
+```
+
+**Control Structures & Data Types:** The level uses arrays to store spline path segments and NPC configurations, booleans to control dialogue state (`isDialogueOpen()`), and strings for sprite paths and character greetings.
+
+```js
+// Array of objects used to define the winding maze path
+const seg1 = spline('seg1', [
+  [0.03, 0.945],
+  [0.09, 0.940],
+  [0.20, 0.920],
+  [0.28, 0.895],
+]);
+```
+
+**Input/Output & Async:** The player is controlled via WASD keyboard input configured through event listeners. The Exit Warden NPC triggers a fade transition using `requestAnimationFrame` and `setTimeout` for async sequencing, then loads the next level via `topGame.transitionToLevel()`.
+
+```js
+// Async transition to next level on player choice
+requestAnimationFrame(() => {
+  fade.style.opacity = '1';
+  setTimeout(() => {
+    topGame.transitionToLevel();
+  }, 800);
+});
+```
+
 ### CS 111 College Credit Evidence
 
 > Students must demonstrate competency in all CS 111 learning objectives through their game project.
