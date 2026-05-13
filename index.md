@@ -106,31 +106,66 @@ Hi! My name is Aarav Nadar
 </div>
 <br>
 
+<br>
+
 ### CS 111 College Credit Evidence
 
-> Demonstrating competency in all CS 111 learning objectives through my game project.
+> Students must demonstrate competency in all CS 111 learning objectives through their game project.
 
-<details>
-<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">📚 Object-Oriented Programming</summary>
-<ul>
-<li>✅ 2+ custom character classes extending base classes</li>
-<li>✅ Methods with parameters (e.g., collisionHandler)</li>
-<li>✅ GameLevel configuration using Object Literals</li>
-<li>✅ Inheritance chain with extends keyword</li>
-<li>✅ Method overriding (update(), draw(), handleCollision())</li>
-<li>✅ Constructor chaining with super()</li>
-</ul>
-</details>
+| Learning Objective | Project Evidence Required | Assessment Method |
+|---|---|---|
+| **Object-Oriented Programming** | | |
+| Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js |
+| Methods & Parameters | Implement methods with parameters (e.g., collisionHandler(other, direction)) | Code review: Method signatures with 2+ parameters |
+| Instantiation & Objects | Instantiate game objects in GameLevel configuration | Code review: GameLevel setup objects |
+| Inheritance (Basic) | Create class hierarchy with 2+ levels (e.g., GameObject → Character → Player) | Code review: extends keyword, inheritance chain |
+| Method Overriding | Override parent methods (update(), draw(), handleCollision()) | Code review: Polymorphic implementations |
+| Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls |
+| **Control Structures** | | |
+| Iteration | Use loops for game object arrays, animation frames | Code review: for, forEach, while loops |
+| Conditionals | Implement collision detection, state transitions | Code review: if/else, nested conditions |
+| Nested Conditions | Complex game logic (e.g., power-up + collision + direction) | Code review: Multi-level conditionals |
+| **Data Types** | | |
+| Numbers | Position, velocity, score tracking | Code review: Numeric properties |
+| Strings | Character names, sprite paths, game states | Code review: String manipulation |
+| Booleans | Flags (isJumping, isPaused, isVulnerable) | Code review: Boolean logic |
+| Arrays | Game object collections, level data | Code review: Array operations |
+| Objects (JSON) | Configuration objects, sprite data | Code review: Object literals |
+| **Operators** | | |
+| Mathematical | Physics calculations (gravity, velocity, collision) | Code review: +, -, *, / in physics |
+| String Operations | Path concatenation, text display | Code review: Template literals, concatenation |
+| Boolean Expressions | Compound conditions in game logic | Code review: &&, \|\|, ! |
+| **Input/Output** | | |
+| Keyboard Input | Arrow keys, space, WASD controls using event listeners | Testing: Key event handlers respond correctly |
+| Canvas Rendering | Draw sprites, backgrounds, platforms using Canvas API | Code review: draw() method implementations |
+| GameEnv Configuration | Set canvas size, difficulty levels, game settings | Code review: GameEnv.create() and GameSetup.js |
+| API Integration | Implement Leaderboard API (POST/GET scores) | Code review: Fetch calls with error handling |
+| Asynchronous I/O | Use async/await or promises for API calls | Code review: async/await or .then() chains |
+| JSON Parsing | Parse API responses (leaderboard data, AI responses) | Code review: JSON.parse(), object destructuring |
+| **Documentation** | | |
+| Code Comments | JSDoc comments for classes and methods | Code review: Comment density >10% |
+| Mini-Lesson Documentation | Create comic/visual post with embedded runtime game demo | Portfolio review: Mini-lesson in personal portfolio |
+| Code Highlights | Annotate key code snippets in documentation (OOP, APIs, collision) | Portfolio review: Highlighted code examples with explanations |
+| **Debugging** | | |
+| Console Debugging | Use console.log to track game state, variables, method calls | Code review: Strategic logging in update/collision methods |
+| Hit Box Visualization | Draw/visualize collision boundaries to refine detection | Demo: Toggle hit box display, adjust collision rectangles |
+| Source-Level Debugging | Set breakpoints in DevTools, step through code execution | Demo: Use Sources tab to pause and inspect code flow |
+| Network Debugging | Examine Network tab for API calls, CORS errors, response status | Demo: Inspect fetch requests, response data, error messages |
+| Application Debugging | Examine cookies, localStorage, session data for login/state | Demo: Application tab inspection of stored data |
+| Element Inspection | Use Element Viewer to inspect canvas, DOM elements, styles | Demo: Inspect element properties and game object state |
+| **Testing & Verification** | | |
+| Gameplay Testing | Test level completion, character interactions, collision detection | Live demo: Play through level without critical bugs |
+| Integration Testing | Test API integration (Leaderboard, NPC AI) with live backend | Demo: Successful score saving and AI responses |
+| API Error Handling | Try/catch blocks for API calls, network error handling | Code review: Error handling for fetch failures |
 
-<details>
-<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">🔁 Control Structures & Data Types</summary>
-<ul>
-<li>✅ Loops for game object arrays and animation frames</li>
-<li>✅ Conditionals for collision detection and state transitions</li>
-<li>✅ Numbers, Strings, Booleans, Arrays, and JSON Objects</li>
-<li>✅ Mathematical and Boolean operators for physics/logic</li>
-</ul>
-</details>
+---
 
-<details>
-<summary style="cursor:pointer; font-weight:bold; font-size:1.1em;">⌨️ Input/Output & APIs</summary>
+✅ 2+ custom character classes extending base classes (Character, Enemy, or NPC)  
+✅ 5+ methods with parameters and return values (override update(), draw(), handleCollision(), etc.)  
+✅ GameLevel configuration using Object Literals to instantiate game objects  
+✅ JSDoc comments on custom classes and methods (>10% comment density)  
+✅ API Integration: Leaderboard (POST/GET scores) + NPC AI interaction with error handling  
+✅ Debugging competency: Use DevTools (Console, Network, Application, Sources) to debug game logic, APIs, and login/state  
+✅ Mini-lesson documentation in personal portfolio (comic/visual style with embedded runtime demo)  
+✅ Code highlights showing OOP hierarchy, API calls, collision logic, and state management  
+✅ Complete, playable custom level tested in GameBuilder and team repository
