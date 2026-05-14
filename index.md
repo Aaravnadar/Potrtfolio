@@ -5,7 +5,7 @@ hide: true
 show_reading_time: false
 ---
 
-> Hi! My name is Aarav Nadar, and I strive to become a skilled computer scientist, building games, tools, and experiences through code.
+> Hi! My name is Aarav Nadar, and I strive towards becoming a skilled computer scientist, building games, tools, and experiences through code.
 
 ### Development Environment
 
@@ -456,3 +456,62 @@ The full level is live and playable at:
 
 Source code is available in the team repository:
 👉 [GitHub - groupofthethree](https://github.com/Ahmad-Se-tech/groupofthethree)
+
+---
+
+<h4>✅ Inheritance & Constructor Chaining</h4>
+<pre><code>// Player extends Character which extends GameObject
+class GameLevelMazeSub extends GameLevel {
+  constructor(gameEnv) {
+    super(gameEnv); // constructor chaining with super()
+  }
+}</code></pre>
+
+<h4>✅ Iteration & Nested Conditionals</h4>
+<pre><code>for (const obj of this.classes) {
+  if (obj.class === Npc) {
+    if (obj.data.interact) {
+      obj.data.interact(); // nested condition
+    }
+  }
+}</code></pre>
+
+<h4>✅ Data Types — Numbers, Strings, Booleans, Arrays, Objects</h4>
+<pre><code>const width = 1280;              // Number
+const id = 'seg1';               // String
+const visible = true;            // Boolean
+const points = [[0.03, 0.945]];  // Array
+const seg1 = { id, splinePoints: [...], lineWidth: 22 }; // Object</code></pre>
+
+<h4>✅ Operators — Math, String, Boolean</h4>
+<pre><code>x: Math.round(px * width),   // mathematical
+const path = baseUrl + '/cave.png'; // string
+if (isAlive && !isPaused) { ... }   // boolean &&, !</code></pre>
+
+<h4>✅ Canvas Rendering & GameEnv Configuration</h4>
+<pre><code>// draw() called every frame via game loop
+draw() {
+  this.ctx.drawImage(this.spriteSheet, sx, sy, sw, sh,
+    this.position.x, this.position.y, this.width, this.height);
+}</code></pre>
+
+<h4>✅ JSON Parsing</h4>
+<pre><code>const res = await fetch('/api/leaderboard');
+const data = await res.json(); // JSON.parse equivalent
+const topScore = data.scores[0].value; // object destructuring</code></pre>
+
+<h4>✅ Debugging — Hit Box, Sources, Network, Application, Elements</h4>
+<pre><code>// Hit box visualization — draw collision boundary
+this.ctx.strokeStyle = 'red';
+this.ctx.strokeRect(this.x, this.y, this.width, this.height);
+
+// Network tab — inspected fetch for CORS errors
+// Sources tab — breakpoints set in interact() method
+// Application tab — checked localStorage for login state
+// Elements tab — inspected canvas position and size</code></pre>
+
+<h4>✅ Gameplay & Integration Testing</h4>
+<pre><code>// Tested: player walks full maze path without clipping
+// Tested: NPC dialogue triggers on collision
+// Tested: leaderboard POST returns 200 with saved score
+// Tested: level transition fires after Exit Warden interaction</code></pre>
