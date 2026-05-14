@@ -239,52 +239,33 @@ requestAnimationFrame(() => {
 
 > Students must demonstrate competency in all CS 111 learning objectives through their game project.
 
-| Learning Objective | Project Evidence Required | Assessment Method | Done |
-|---|---|---|---|
-| **Object-Oriented Programming** | | | |
-| Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js | ✅ |
-| Methods & Parameters | Implement methods with parameters (e.g., collisionHandler(other, direction)) | Code review: Method signatures with 2+ parameters | ✅ |
-| Instantiation & Objects | Instantiate game objects in GameLevel configuration | Code review: GameLevel setup objects | ✅ |
-| Inheritance (Basic) | Create class hierarchy with 2+ levels (e.g., GameObject → Character → Player) | Code review: extends keyword, inheritance chain | ✅ |
-| Method Overriding | Override parent methods (update(), draw(), handleCollision()) | Code review: Polymorphic implementations | ✅ |
-| Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls | ✅ |
-| **Control Structures** | | | |
-| Iteration | Use loops for game object arrays, animation frames | Code review: for, forEach, while loops | ✅ |
-| Conditionals | Implement collision detection, state transitions | Code review: if/else, nested conditions | ✅ |
-| Nested Conditions | Complex game logic (e.g., power-up + collision + direction) | Code review: Multi-level conditionals | ✅ |
-| **Data Types** | | | |
-| Numbers | Position, velocity, score tracking | Code review: Numeric properties | ✅ |
-| Strings | Character names, sprite paths, game states | Code review: String manipulation | ✅ |
-| Booleans | Flags (isJumping, isPaused, isVulnerable) | Code review: Boolean logic | ✅ |
-| Arrays | Game object collections, level data | Code review: Array operations | ✅ |
-| Objects (JSON) | Configuration objects, sprite data | Code review: Object literals | ✅ |
-| **Operators** | | | |
-| Mathematical | Physics calculations (gravity, velocity, collision) | Code review: +, -, *, / in physics | ✅ |
-| String Operations | Path concatenation, text display | Code review: Template literals, concatenation | ✅ |
-| Boolean Expressions | Compound conditions in game logic | Code review: &&, \|\|, ! | ✅ |
-| **Input/Output** | | | |
-| Keyboard Input | Arrow keys, space, WASD controls using event listeners | Testing: Key event handlers respond correctly | ✅ |
-| Canvas Rendering | Draw sprites, backgrounds, platforms using Canvas API | Code review: draw() method implementations | ✅ |
-| GameEnv Configuration | Set canvas size, difficulty levels, game settings | Code review: GameEnv.create() and GameSetup.js | ✅ |
-| API Integration | Implement Leaderboard API (POST/GET scores) | Code review: Fetch calls with error handling | ✅ |
-| Asynchronous I/O | Use async/await or promises for API calls | Code review: async/await or .then() chains | ✅ |
-| JSON Parsing | Parse API responses (leaderboard data, AI responses) | Code review: JSON.parse(), object destructuring | ✅ |
-| **Documentation** | | | |
-| Code Comments | JSDoc comments for classes and methods | Code review: Comment density >10% | ✅ |
-| Mini-Lesson Documentation | Create comic/visual post with embedded runtime game demo | Portfolio review: Mini-lesson in personal portfolio | ✅ |
-| Code Highlights | Annotate key code snippets in documentation (OOP, APIs, collision) | Portfolio review: Highlighted code examples with explanations | ✅ |
-| **Debugging** | | | |
-| Console Debugging | Use console.log to track game state, variables, method calls | Code review: Strategic logging in update/collision methods | ✅ |
-| Hit Box Visualization | Draw/visualize collision boundaries to refine detection | Demo: Toggle hit box display, adjust collision rectangles | ✅ |
-| Source-Level Debugging | Set breakpoints in DevTools, step through code execution | Demo: Use Sources tab to pause and inspect code flow | ✅ |
-| Network Debugging | Examine Network tab for API calls, CORS errors, response status | Demo: Inspect fetch requests, response data, error messages | ✅ |
-| Application Debugging | Examine cookies, localStorage, session data for login/state | Demo: Application tab inspection of stored data | ✅ |
-| Element Inspection | Use Element Viewer to inspect canvas, DOM elements, styles | Demo: Inspect element properties and game object state | ✅ |
-| **Testing & Verification** | | | |
-| Gameplay Testing | Test level completion, character interactions, collision detection | Live demo: Play through level without critical bugs | ✅ |
-| Integration Testing | Test API integration (Leaderboard, NPC AI) with live backend | Demo: Successful score saving and AI responses | ✅ |
-| API Error Handling | Try/catch blocks for API calls, network error handling | Code review: Error handling for fetch failures | ✅ |
-
+| Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js | [✅](#classes) |
+| Inheritance (Basic) | Create class hierarchy with 2+ levels | Code review: extends keyword, inheritance chain | [✅](#classes) |
+| Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls | [✅](#classes) |
+| Iteration | Use loops for game object arrays, animation frames | Code review: for, forEach, while loops | [✅](#iteration) |
+| Conditionals | Implement collision detection, state transitions | Code review: if/else, nested conditions | [✅](#iteration) |
+| Nested Conditions | Complex game logic | Code review: Multi-level conditionals | [✅](#iteration) |
+| Numbers | Position, velocity, score tracking | Code review: Numeric properties | [✅](#datatypes) |
+| Strings | Character names, sprite paths, game states | Code review: String manipulation | [✅](#datatypes) |
+| Booleans | Flags (isJumping, isPaused, isVulnerable) | Code review: Boolean logic | [✅](#datatypes) |
+| Arrays | Game object collections, level data | Code review: Array operations | [✅](#datatypes) |
+| Objects (JSON) | Configuration objects, sprite data | Code review: Object literals | [✅](#datatypes) |
+| Mathematical | Physics calculations | Code review: +, -, *, / in physics | [✅](#operators) |
+| String Operations | Path concatenation, text display | Code review: Template literals | [✅](#operators) |
+| Boolean Expressions | Compound conditions in game logic | Code review: &&, \|\|, ! | [✅](#operators) |
+| Canvas Rendering | Draw sprites, backgrounds, platforms | Code review: draw() method implementations | [✅](#canvas) |
+| GameEnv Configuration | Set canvas size, difficulty levels | Code review: GameEnv.create() and GameSetup.js | [✅](#canvas) |
+| API Integration | Implement Leaderboard API (POST/GET scores) | Code review: Fetch calls with error handling | [✅](#json) |
+| JSON Parsing | Parse API responses | Code review: JSON.parse(), object destructuring | [✅](#json) |
+| Console Debugging | Use console.log to track game state | Code review: Strategic logging | [✅](#debugging) |
+| Hit Box Visualization | Draw/visualize collision boundaries | Demo: Toggle hit box display | [✅](#debugging) |
+| Source-Level Debugging | Set breakpoints in DevTools | Demo: Use Sources tab | [✅](#debugging) |
+| Network Debugging | Examine Network tab for API calls | Demo: Inspect fetch requests | [✅](#debugging) |
+| Application Debugging | Examine cookies, localStorage | Demo: Application tab inspection | [✅](#debugging) |
+| Element Inspection | Use Element Viewer to inspect canvas | Demo: Inspect element properties | [✅](#debugging) |
+| Gameplay Testing | Test level completion, character interactions | Live demo: Play through level | [✅](#testing) |
+| Integration Testing | Test API integration with live backend | Demo: Successful score saving | [✅](#testing) |
+| API Error Handling | Try/catch blocks for API calls | Code review: Error handling for fetch failures | [✅](#testing) |
 ---
 
 ✅ 2+ custom character classes extending base classes (Character, Enemy, or NPC)  
@@ -457,61 +438,60 @@ The full level is live and playable at:
 Source code is available in the team repository:
 👉 [GitHub - groupofthethree](https://github.com/Ahmad-Se-tech/groupofthethree)
 
----
 
-<h4>✅ Inheritance & Constructor Chaining</h4>
-<pre><code>// Player extends Character which extends GameObject
-class GameLevelMazeSub extends GameLevel {
+<div markdown="0">
+
+<h4 id="classes">✅ Inheritance & Constructor Chaining</h4>
+<pre><code>class GameLevelMazeSub extends GameLevel {
   constructor(gameEnv) {
-    super(gameEnv); // constructor chaining with super()
+    super(gameEnv);
   }
 }</code></pre>
 
-<h4>✅ Iteration & Nested Conditionals</h4>
+<h4 id="iteration">✅ Iteration & Nested Conditionals</h4>
 <pre><code>for (const obj of this.classes) {
   if (obj.class === Npc) {
     if (obj.data.interact) {
-      obj.data.interact(); // nested condition
+      obj.data.interact();
     }
   }
 }</code></pre>
 
-<h4>✅ Data Types — Numbers, Strings, Booleans, Arrays, Objects</h4>
+<h4 id="datatypes">✅ Data Types — Numbers, Strings, Booleans, Arrays, Objects</h4>
 <pre><code>const width = 1280;              // Number
 const id = 'seg1';               // String
 const visible = true;            // Boolean
 const points = [[0.03, 0.945]];  // Array
 const seg1 = { id, splinePoints: [...], lineWidth: 22 }; // Object</code></pre>
 
-<h4>✅ Operators — Math, String, Boolean</h4>
-<pre><code>x: Math.round(px * width),   // mathematical
+<h4 id="operators">✅ Operators — Math, String, Boolean</h4>
+<pre><code>x: Math.round(px * width),        // mathematical
 const path = baseUrl + '/cave.png'; // string
 if (isAlive && !isPaused) { ... }   // boolean &&, !</code></pre>
 
-<h4>✅ Canvas Rendering & GameEnv Configuration</h4>
-<pre><code>// draw() called every frame via game loop
-draw() {
+<h4 id="canvas">✅ Canvas Rendering & GameEnv Configuration</h4>
+<pre><code>draw() {
   this.ctx.drawImage(this.spriteSheet, sx, sy, sw, sh,
     this.position.x, this.position.y, this.width, this.height);
 }</code></pre>
 
-<h4>✅ JSON Parsing</h4>
+<h4 id="json">✅ JSON Parsing</h4>
 <pre><code>const res = await fetch('/api/leaderboard');
-const data = await res.json(); // JSON.parse equivalent
-const topScore = data.scores[0].value; // object destructuring</code></pre>
+const data = await res.json();
+const topScore = data.scores[0].value;</code></pre>
 
-<h4>✅ Debugging — Hit Box, Sources, Network, Application, Elements</h4>
-<pre><code>// Hit box visualization — draw collision boundary
-this.ctx.strokeStyle = 'red';
+<h4 id="debugging">✅ Debugging — Hit Box, Sources, Network, Application, Elements</h4>
+<pre><code>this.ctx.strokeStyle = 'red';
 this.ctx.strokeRect(this.x, this.y, this.width, this.height);
-
+// Sources tab — breakpoints set in interact()
 // Network tab — inspected fetch for CORS errors
-// Sources tab — breakpoints set in interact() method
 // Application tab — checked localStorage for login state
 // Elements tab — inspected canvas position and size</code></pre>
 
-<h4>✅ Gameplay & Integration Testing</h4>
+<h4 id="testing">✅ Gameplay & Integration Testing</h4>
 <pre><code>// Tested: player walks full maze path without clipping
 // Tested: NPC dialogue triggers on collision
 // Tested: leaderboard POST returns 200 with saved score
 // Tested: level transition fires after Exit Warden interaction</code></pre>
+
+</div>
