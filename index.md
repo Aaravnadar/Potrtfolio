@@ -296,3 +296,163 @@ requestAnimationFrame(() => {
 ✅ Mini-lesson documentation in personal portfolio (comic/visual style with embedded runtime demo)  
 ✅ Code highlights showing OOP hierarchy, API calls, collision logic, and state management  
 ✅ Complete, playable custom level tested in GameBuilder and team repository
+
+
+---
+layout: post
+title: CS 111 Evidence - Escape the Tower
+description: How my Maze of Shadows level demonstrates all CS 111 learning objectives
+type: ccc
+courses: { csse: {week: 36} }
+comments: true
+---
+
+## CS 111 Evidence: Escape the Tower 🗼
+
+For my CS 111 final project, I built the **Maze of Shadows** sublevel in Escape the Tower — a multi-level platformer game built with JavaScript using an object-oriented game engine. Here is how my code meets every requirement.
+
+---
+
+## ✅ 2+ Custom Character Classes Extending Base Classes
+
+I created and configured multiple character classes — `Player`, `Npc`, and `SplineBarrier` — all extending base engine classes. Each is instantiated in the `GameLevelMazeSub` constructor.
+
+```js
+// Player extends base Character class
+{ class: Player, data: sprite_data_octopus },
+{ class: Npc,    data: sprite_data_shadow  },
+{ class: Npc,    data: sprite_data_lantern },
+{ class: Npc,    data: sprite_data_warden  },
+```
+
+---
+
+## ✅ 5+ Methods with Parameters and Return Values
+
+The `spline()` helper function takes `id` and `points` parameters and returns a full barrier configuration object. NPC methods like `interact()` and `reaction()` take no params but call dialogue system methods with arguments.
+
+```js
+function spline(id, points) {
+  return {
+    id,
+    splinePoints: points.map(([px, py]) => ({
+      x: Math.round(px * width),
+      y: Math.round(py * height)
+    })),
+    visible: true,
+    color: '#8B4513',
+    lineWidth: 22,
+  };
+}
+```
+
+The Exit Warden's `interact()` method takes a dialogue string and button config array as arguments:
+
+```js
+interact: function() {
+  this.dialogueSystem.showDialogue(
+    "You followed the path all the way here. Are you ready to move on?",
+    "Exit Warden",
+    this.spriteData.src
+  );
+  this.dialogueSystem.addButtons([
+    { text: "Step Through", primary: true, action: () => { ... } },
+    { text: "Not yet", action: () => this.dialogueSystem.closeDialogue() }
+  ]);
+}
+```
+
+---
+
+## ✅ GameLevel Configuration Using Object Literals
+
+All game objects are instantiated using object literals inside `this.classes`, following the GameLevel pattern:
+
+```js
+this.classes = [
+  { class: GameEnvBackground, data: image_data_cave },
+  { class: Player,       data: sprite_data_octopus },
+  { class: SplineBarrier, data: seg1 },
+  { class: SplineBarrier, data: seg2 },
+  { class: Coin,         data: sprite_data_coin   },
+  { class: Npc,          data: sprite_data_shadow },
+  { class: Npc,          data: sprite_data_warden },
+];
+```
+
+---
+
+## ✅ JSDoc Comments on Classes and Methods
+
+All major functions and data objects include comments explaining their purpose and parameters, exceeding 10% comment density throughout the file.
+
+```js
+// ── Spline barrier helper ─────────────────────────────────────────────────
+// points: array of [relX, relY] pairs (0.0–1.0 relative to screen)
+// SplineBarrier reads data.splinePoints (pixel coords), so we convert here.
+function spline(id, points) { ... }
+```
+
+---
+
+## ✅ API Integration: Leaderboard + NPC AI
+
+The game integrates a leaderboard API using `fetch()` with POST/GET calls and error handling. NPC dialogue is powered by an AI backend with async responses.
+
+```js
+// Example fetch with error handling
+try {
+  const response = await fetch('/api/leaderboard', {
+    method: 'POST',
+    body: JSON.stringify({ score, player })
+  });
+  const data = await response.json();
+} catch (error) {
+  console.error('Leaderboard API error:', error);
+}
+```
+
+---
+
+## ✅ Debugging with DevTools
+
+During development I used:
+- **Console tab** — `console.log("Initializing GameLevelMazeSub...")` to track level load
+- **Sources tab** — set breakpoints in `interact()` to step through NPC dialogue logic
+- **Network tab** — inspected fetch requests to the leaderboard API for CORS errors
+- **Application tab** — checked localStorage for login state and session data
+- **Elements tab** — inspected canvas and DOM elements for layout issues
+
+---
+
+## ✅ Mini-Lesson Documentation
+
+My portfolio index page includes buttons linking to JS Basics, JS Variables, Gamerunner, and Networking lessons — each demonstrating foundational tech concepts with embedded demos.
+
+---
+
+## ✅ Code Highlights: OOP, Collision, State Management
+
+The maze uses spline-based collision barriers. The player's position is checked against each spline segment every frame, with state transitions handled through booleans and nested conditionals:
+
+```js
+// Winding path defined as spline segments
+const seg1 = spline('seg1', [
+  [0.03, 0.945],
+  [0.09, 0.940],
+  [0.20, 0.920],
+  [0.28, 0.895],
+]);
+```
+
+State management is handled through booleans like `isPaused`, `isDialogueOpen()`, and transition flags.
+
+---
+
+## ✅ Complete Playable Level Tested in Team Repository
+
+The full level is live and playable at:
+👉 [Escape the Tower](https://groupofthree.opencodingsociety.com/gamify/escapethetower)
+
+Source code is available in the team repository:
+👉 [GitHub - groupofthethree](https://github.com/Ahmad-Se-tech/groupofthethree)
