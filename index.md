@@ -5,7 +5,7 @@ hide: true
 show_reading_time: false
 ---
 
-Hi! My name is Aarav Nadar  
+> Hi! My name is Aarav Nadar, and I strive to become a skilled computer scientist, building games, tools, and experiences through code.
 
 ### Development Environment
 
