@@ -239,6 +239,8 @@ requestAnimationFrame(() => {
 
 > Students must demonstrate competency in all CS 111 learning objectives through their game project.
 
+| Competency | Requirement | Evidence | Status |
+| --- | --- | --- | --- |
 | Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js | [✅](#classes) |
 | Inheritance (Basic) | Create class hierarchy with 2+ levels | Code review: extends keyword, inheritance chain | [✅](#classes) |
 | Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls | [✅](#classes) |
