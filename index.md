@@ -241,34 +241,33 @@ Students must demonstrate competency in all CS 111 learning objectives through t
 
 | Competency | Requirement | Evidence | Status |
 | --- | --- | --- | --- |
-| Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js | [✅](#classes) |
-| Inheritance (Basic) | Create class hierarchy with 2+ levels | Code review: extends keyword, inheritance chain | [✅](#classes) |
-| Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls | [✅](#classes) |
-| Iteration | Use loops for game object arrays, animation frames | Code review: for, forEach, while loops | [✅](#iteration) |
-| Conditionals | Implement collision detection, state transitions | Code review: if/else, nested conditions | [✅](#iteration) |
-| Nested Conditions | Complex game logic | Code review: Multi-level conditionals | [✅](#iteration) |
-| Numbers | Position, velocity, score tracking | Code review: Numeric properties | [✅](#datatypes) |
-| Strings | Character names, sprite paths, game states | Code review: String manipulation | [✅](#datatypes) |
-| Booleans | Flags (isJumping, isPaused, isVulnerable) | Code review: Boolean logic | [✅](#datatypes) |
-| Arrays | Game object collections, level data | Code review: Array operations | [✅](#datatypes) |
-| Objects (JSON) | Configuration objects, sprite data | Code review: Object literals | [✅](#datatypes) |
-| Mathematical | Physics calculations | Code review: +, -, *, / in physics | [✅](#operators) |
-| String Operations | Path concatenation, text display | Code review: Template literals | [✅](#operators) |
-| Boolean Expressions | Compound conditions in game logic | Code review: &&, \|\|, ! | [✅](#operators) |
-| Canvas Rendering | Draw sprites, backgrounds, platforms | Code review: draw() method implementations | [✅](#canvas) |
-| GameEnv Configuration | Set canvas size, difficulty levels | Code review: GameEnv.create() and GameSetup.js | [✅](#canvas) |
-| API Integration | Implement Leaderboard API (POST/GET scores) | Code review: Fetch calls with error handling | [✅](#json) |
-| JSON Parsing | Parse API responses | Code review: JSON.parse(), object destructuring | [✅](#json) |
-| Console Debugging | Use console.log to track game state | Code review: Strategic logging | [✅](#debugging) |
-| Hit Box Visualization | Draw/visualize collision boundaries | Demo: Toggle hit box display | [✅](#debugging) |
-| Source-Level Debugging | Set breakpoints in DevTools | Demo: Use Sources tab | [✅](#debugging) |
-| Network Debugging | Examine Network tab for API calls | Demo: Inspect fetch requests | [✅](#debugging) |
-| Application Debugging | Examine cookies, localStorage | Demo: Application tab inspection | [✅](#debugging) |
-| Element Inspection | Use Element Viewer to inspect canvas | Demo: Inspect element properties | [✅](#debugging) |
-| Gameplay Testing | Test level completion, character interactions | Live demo: Play through level | [✅](#testing) |
-| Integration Testing | Test API integration with live backend | Demo: Successful score saving | [✅](#testing) |
-| API Error Handling | Try/catch blocks for API calls | Code review: Error handling for fetch failures | [✅](#testing) |
----
+| Writing Classes | Create minimum 2 custom character classes extending base classes | Code review: Player.js, NPC.js, Enemy.js | ✅ |
+| Inheritance (Basic) | Create class hierarchy with 2+ levels | Code review: extends keyword, inheritance chain | ✅ |
+| Constructor Chaining | Use super() to chain constructors | Code review: super(data, gameEnv) calls | ✅ |
+| Iteration | Use loops for game object arrays, animation frames | Code review: for, forEach, while loops | ✅ |
+| Conditionals | Implement collision detection, state transitions | Code review: if/else, nested conditions | ✅ |
+| Nested Conditions | Complex game logic | Code review: Multi-level conditionals | ✅ |
+| Numbers | Position, velocity, score tracking | Code review: Numeric properties | ✅ |
+| Strings | Character names, sprite paths, game states | Code review: String manipulation | ✅ |
+| Booleans | Flags (isJumping, isPaused, isVulnerable) | Code review: Boolean logic | ✅ |
+| Arrays | Game object collections, level data | Code review: Array operations | ✅ |
+| Objects (JSON) | Configuration objects, sprite data | Code review: Object literals | ✅ |
+| Mathematical | Physics calculations | Code review: +, -, *, / in physics | ✅ |
+| String Operations | Path concatenation, text display | Code review: Template literals | ✅ |
+| Boolean Expressions | Compound conditions in game logic | Code review: &&, \|\|, ! | ✅ |
+| Canvas Rendering | Draw sprites, backgrounds, platforms | Code review: draw() method implementations | ✅ |
+| GameEnv Configuration | Set canvas size, difficulty levels | Code review: GameEnv.create() and GameSetup.js | ✅ |
+| API Integration | Implement Leaderboard API (POST/GET scores) | Code review: Fetch calls with error handling | ✅ |
+| JSON Parsing | Parse API responses | Code review: JSON.parse(), object destructuring | ✅ |
+| Console Debugging | Use console.log to track game state | Code review: Strategic logging | ✅ |
+| Hit Box Visualization | Draw/visualize collision boundaries | Demo: Toggle hit box display | ✅ |
+| Source-Level Debugging | Set breakpoints in DevTools | Demo: Use Sources tab | ✅ |
+| Network Debugging | Examine Network tab for API calls | Demo: Inspect fetch requests | ✅ |
+| Application Debugging | Examine cookies, localStorage | Demo: Application tab inspection | ✅ |
+| Element Inspection | Use Element Viewer to inspect canvas | Demo: Inspect element properties | ✅ |
+| Gameplay Testing | Test level completion, character interactions | Live demo: Play through level | ✅ |
+| Integration Testing | Test API integration with live backend | Demo: Successful score saving | ✅ |
+| API Error Handling | Try/catch blocks for API calls | Code review: Error handling for fetch failures | ✅ |
 
 ✅ 2+ custom character classes extending base classes (Character, Enemy, or NPC)  
 ✅ 5+ methods with parameters and return values (override update(), draw(), handleCollision(), etc.)  
