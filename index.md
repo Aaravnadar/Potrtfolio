@@ -235,6 +235,8 @@ requestAnimationFrame(() => {
 
 </div>
 
+<br>
+
 ### CS 111 College Credit Evidence
 
 Students must demonstrate competency in all CS 111 learning objectives through their game project.
